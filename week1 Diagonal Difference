@@ -1,0 +1,27 @@
+class Result {
+  public static int diagonalDifference(List<List<Integer>> arr) {
+         int dia1=0;
+         int dia2=0;
+         int n=arr.size();
+         for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i==j){
+                    dia1+=arr.get(i).get(j);
+                }
+            }
+         }
+                Collections.reverse(arr);
+                for(int i=0;i<n;i++){
+                    for(int j=0;j<n;j++){
+                        if(i==j){
+                           dia2+=arr.get(i).get(j);
+                        }
+                    }
+                }
+                
+                
+         
+         return Math.abs(dia1-dia2);
+    }
+
+}
